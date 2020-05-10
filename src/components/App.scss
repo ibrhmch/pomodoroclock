@@ -1,0 +1,112 @@
+html {
+  font-size: 62.5%;
+  padding: 0;
+  margin: 0;
+
+  @media (max-width: 700px) {
+    font-size: 50%;
+  }
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 5rem;
+  height: 100vh;
+  color: #e7eaeb;
+  background-color: #a7a7a2;
+  .container {
+    background-color: #444c5f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    margin: 2rem;
+    border-radius: 1rem;
+    border: 0.5rem solid gray;
+    font-family: "Courier New", Courier, monospace;
+    .heading {
+      margin: 3rem 0;
+      font-size: 4rem;
+    }
+    .pomodoro {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #717471;
+      border-radius: 5rem;
+      border: 0.8rem solid #333;
+      padding: 1rem;
+      font-size: 4rem;
+      width: 80%;
+      & > * {
+        margin: 1rem 0;
+      }
+      text-transform: uppercase;
+      &-message {
+        font-size: 3rem;
+        font-weight: 600;
+      }
+      &-buttons {
+        display: flex;
+        width: 50%;
+        justify-content: space-around;
+      }
+    }
+    .set {
+      width: 80%;
+      font-size: 1.8rem;
+      display: flex;
+      text-transform: uppercase;
+      justify-content: space-around;
+      margin: 1rem;
+      .option {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    .contact {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 40%;
+      font-size: 2rem;
+      font-weight: 550;
+      margin-top: 2rem;
+      padding-top: 1rem;
+      color: lightslategrey;
+      font-family: monospace;
+      text-transform: uppercase;
+      a {
+        color: #b7bdc6;
+        font-size: 2rem;
+        display: block;
+        transition: 0.2s;
+        &:hover {
+          color: gray;
+        }
+      }
+    }
+
+    button {
+      background-color: silver;
+      border: none;
+      border-radius: 0.5rem;
+      transition: 0.25s;
+      margin: 0.2rem;
+      i {
+        margin: 0 0.2rem;
+      }
+      &:hover {
+        cursor: pointer;
+        color: silver;
+        background-color: #333;
+      }
+    }
+  }
+}
