@@ -17,6 +17,7 @@ body {
   height: 100vh;
   color: #e7eaeb;
   background-color: #a7a7a2;
+  touch-action: manipulation;
   .container {
     background-color: #444c5f;
     display: flex;

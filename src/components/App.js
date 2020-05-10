@@ -1,19 +1,36 @@
 import React, { useState, useEffect } from "react";
 import "./App.scss";
 import Pomodoro from "./Pomodoro";
-import SetPomodoro from "./SetPomodoro";
+import SetIntervals from "./SetIntervals";
 import Contact from "./Contact";
 
 const App = () => {
-  const [min, setMin] = useState("00");
-  const [sec, setSec] = useState("00");
-  const [miliSec, setMiliSec] = useState("00");
+  const [session, setSession] = useState(25 * 60);
+  const [breakLength, setBreak] = useState(1 * 60);
+  useEffect(() => {});
 
+  const incSession = () =>
+    session < 60 * 60 ? setSession(parseInt(session) + 60) : null;
+  const decSession = () =>
+    session > 1 * 60 ? setSession(parseInt(session) - 60) : null;
+
+  const incBreak = () =>
+    breakLength < 60 * 60 ? setBreak(parseInt(breakLength) + 60) : null;
+  const decBreak = () =>
+    breakLength > 1 * 60 ? setBreak(parseInt(breakLength) - 60) : null;
   return (
     <div className="container">
       <h4 className="heading">Pomodoro Clock</h4>
-      <Pomodoro message={"Break"} mins={min} secs={sec} milisecs={miliSec} />
-      <SetPomodoro />
+
+      <Pomodoro sessionLength={session} breakLength={breakLength} />
+
+      <SetIntervals
+        changeSession={{ incSession, decSession }}
+        session={session}
+        changeBreak={{ incBreak, decBreak }}
+        breakLength={breakLength}
+      />
+
       <Contact name="ibrahim" twitter="ibrhmch" github="ibrhmch" />
     </div>
   );
