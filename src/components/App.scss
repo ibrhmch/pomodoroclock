@@ -43,6 +43,13 @@ body {
       padding: 1rem;
       font-size: 4rem;
       width: 80%;
+      @keyframes break {
+        100% {
+          color: #672028;
+          border: 0.3rem solid #daa2a5;
+          background-color: #a69098;
+        }
+      }
       & > * {
         margin: 1rem 0;
       }

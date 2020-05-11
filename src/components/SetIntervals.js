@@ -2,8 +2,8 @@ import React from "react";
 import moment from "moment";
 
 const SetIntervals = ({ changeSession, changeBreak, session, breakLength }) => {
-  const breakLengthInMinutes = moment.duration(breakLength, "s").minutes();
-  const sessionLengthInMinutes = moment.duration(session, "s").minutes();
+  const breakLengthInMinutes = moment.duration(breakLength, "s").asMinutes();
+  const sessionLengthInMinutes = moment.duration(session, "s").asMinutes();
   return (
     <div className="set">
       <div className="option">
