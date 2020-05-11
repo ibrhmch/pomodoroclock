@@ -6,7 +6,7 @@ import Contact from "./Contact";
 
 const App = () => {
   const [sessionLength, setSessionLength] = useState(0.1 * 60);
-  const [breakLength, setBreakLength] = useState(1 * 60);
+  const [breakLength, setBreakLength] = useState(0.1 * 60);
   const [sessionType, setSessionType] = useState("session");
   const [intervalId, setIntervalId] = useState(null);
   const [timeLeft, setTimeLeft] = useState(sessionLength);
